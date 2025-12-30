@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Starter Page</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 2rem; color: #111; }
+    header { margin-bottom: 1.5rem; }
+    .container { max-width: 800px; }
+    button { padding: 0.5rem 1rem; font-size: 1rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Welcome</h1>
+      <p id="status">Page loaded.</p>
+    </header>
+
+    <main>
+      <p>This is a minimal HTML template. Click the button to update the text below.</p>
+      <button id="btn">Click me</button>
+      <p id="output"></p>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById('btn').addEventListener('click', () => {
+      const out = document.getElementById('output');
+      out.textContent = 'Button clicked at ' + new Date().toLocaleTimeString();
+      document.getElementById('status').textContent = 'Interacted';
+    });
+  </script>
+</body>
+</html>
